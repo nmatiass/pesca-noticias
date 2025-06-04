@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Clipping de Notícias</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        h1 { color: darkblue; }
+        .noticia { border-bottom: 1px solid #ccc; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Clipping de Notícias</h1>
+    {% for n in noticias %}
+        <div class="noticia">
+            <h2>{{ n.titulo }}</h2>
+            <p>{{ n.resumo }}</p>
+            <a href="{{ n.link }}" target="_blank">Leia na fonte ➝</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
